@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>ForeverPlays -- Accumulation Trading Method | Real-Time Trading Insights</title>
+    <meta name="description" content="Real-time insights into global stock transactions using the Accumulation Trading Method. Follow live trades by the ForeverPlays team. Coming soon.">
+    <meta name="keywords" content="Accumulation Trading Method, stock trading, global equities, real-time trades, trading insights, ForeverPlays">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ForeverPlays -- Accumulation Trading Method">
+    <meta property="og:description" content="Real-time insights into global stock transactions. Follow live trades by the ForeverPlays team. Coming soon.">
+    <meta property="og:url" content="https://foreverplays.com">
+    <meta property="og:site_name" content="ForeverPlays">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ForeverPlays -- Accumulation Trading Method">
+    <meta name="twitter:description" content="Real-time trading insights using the Accumulation Trading Method. Coming soon.">
+
+    <!-- Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ForeverPlays",
+        "url": "https://foreverplays.com",
+        "description": "Real-time insights into global stock transactions using the Accumulation Trading Method by Mrtn and the ForeverPlays team."
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #1a1a2e;
+            --accent: #2563eb;
+            --muted: #6b7280;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .container { max-width: 720px; text-align: center; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 2rem; }
+        .countdown {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 2rem 0;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .countdown .unit { display: inline-block; min-width: 80px; }
+        .countdown small {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--muted);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .description { line-height: 1.8; margin: 2rem 0; text-align: left; }
+        .description p { margin-bottom: 1rem; }
+        .glossary { text-align: left; margin: 2rem 0; }
+        .glossary h2 { margin-bottom: 1rem; font-size: 1.3rem; }
+        .glossary dt { font-weight: 600; margin-top: 0.75rem; }
+        .glossary dd { color: var(--muted); margin-left: 1rem; line-height: 1.6; }
+        footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .countdown { font-size: 2rem; gap: 0.75rem; }
+            .countdown .unit { min-width: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ForeverPlays</h1>
+        <p class="subtitle">Accumulation Trading Method</p>
+
+        <div class="countdown" id="countdown">
+            <div class="unit"><span id="days">--</span><small>days</small></div>
+            <div class="unit"><span id="hours">--</span><small>hours</small></div>
+            <div class="unit"><span id="minutes">--</span><small>min</small></div>
+        </div>
+
+        <div class="description">
+            <p>Soon you will find here real-time insights into global stock
+            transactions executed by Mrtn and the ForeverPlays team, following
+            the <strong>Accumulation Trading Method</strong>.</p>
+
+            <p>Track live trades across global exchanges. Understand the
+            methodology. Learn from real decisions.</p>
+        </div>
+
+        <div class="glossary">
+            <h2>Key Concepts</h2>
+            <dl>
+                <dt>Accumulation Trading Method</dt>
+                <dd>A systematic approach to building positions in global equities
+                through phased accumulation, risk-managed entries, and disciplined
+                exit strategies.</dd>
+
+                <dt>Setup</dt>
+                <dd>A defined trading opportunity within a stock's observation phase,
+                with planned entry points and allocation targets.</dd>
+
+                <dt>Serial</dt>
+                <dd>An individual position within a setup, representing actual
+                capital deployed at a specific price level.</dd>
+
+                <dt>Phase</dt>
+                <dd>The current stage of a stock in the watchlist lifecycle:
+                Radar, Lokalizacja, Setup, Obserwacja.</dd>
+            </dl>
+        </div>
+
+        <footer>
+            <p>ForeverPlays -- Coming Soon</p>
+        </footer>
+    </div>
+
+    <script>
+        var launchDate = new Date('2026-04-01T00:00:00Z');
+        function updateCountdown() {
+            var now = new Date();
+            var diff = launchDate - now;
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML = '<div class="unit"><span>LIVE</span></div>';
+                return;
+            }
+            var d = Math.floor(diff / (1000*60*60*24));
+            var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+            var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+            document.getElementById('days').textContent = d;
+            document.getElementById('hours').textContent = h;
+            document.getElementById('minutes').textContent = m;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+    </script>
+</body>
+</html>
